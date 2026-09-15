@@ -1,0 +1,368 @@
+tokenizer vocab size: 32,768
+
+==============================================================================
+MMLU (all / auxiliary_train)
+==============================================================================
+  rows: 99,842
+  type: MMLU
+  public attrs/methods: ds, eval_type, evaluate, get_example, groups, letters, num_examples, split, start, step, stop, subset
+
+  --- row 0 ---
+  python type: dict
+  keys: ['messages', 'subject', 'letters']
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Multiple Choice question: Rules in the reading room Hello, everyone. Welcome to the school reading room. We hope you have a good time here. Before you go into the reading room, there are some rules you need to keep. 1.The reading room is open from 8:00 a.m. to 5:00 p.m. from Monday to Friday. 2. Don't take your bag into the reading room. 3. Don't talk loudly in the reading room. 4. Don't take any food or drink into the reading room. 5. Take only one book at a time. After you finish reading the book, you must put it back and then you can take another one. Don't take many books to your seat. 6. Before you leave, you must the book to the bookshelf. You can't take any book out of the reading room. How long is the reading room open every day?\n- Ten hours.=A\n- Nine hours.=B\n- Seven hours.=C\n- Eight hours.=D\n\nRespond only with the letter of the correct answer."
+      },
+      {
+        "role": "assistant",
+        "content": "B"
+      }
+    ],
+    "subject": "",
+    "letters": [
+      "A",
+      "B",
+      "C",
+      "D"
+    ]
+  }
+
+  --- row 1 ---
+  python type: dict
+  keys: ['messages', 'subject', 'letters']
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Multiple Choice question: AFRICAN MANGO FAQs Q : How do I use AFRICAN MANGO? A : It's simple... Just take one rapid - release capsule  , 3 times daily before meals (i.e., 30 minutes before breakfast, lunch, and dinner.) Q : Is it safe? A : Yes. Unlike other diet pills, Pure African Mango Extract (lrvingia gabonensis) does not contain any natural or artificial stimulants. Clinical studies have shown this nutrient to be both safe and well-tolerated. It's easy on your system and helps you lose body fat naturally. Q : Who uses AFRICAN MANGO? A : Everybody from A-List Hollywood movie stars to everyday men and women who want to lose pounds and inches of excess body fat. It's currently popular in Hollywood today because many of today's movie scripts call for actors and actresses to be in their absolute best shape. Q : Do I have to exercise and diet in order to see results? A : Research shows 100% Pure African Mango Extract helped people lose weight and belly fat without additional diet or exercise. However, in order to achieve your best weight-loss results, we highly recommend incorporating fun lifestyle exercises (like walki
+    ... [1986 more chars]
+
+==============================================================================
+GSM8K (main / train)
+==============================================================================
+  rows: 7,473
+  type: GSM8K
+  public attrs/methods: ds, eval_type, evaluate, get_example, num_examples, reward, start, step, stop
+
+  --- row 0 ---
+  python type: dict
+  keys: ['messages']
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Mimi picked up 2 dozen seashells on the beach.  Kyle found twice as many shells as Mimi and put them in his pocket. Leigh grabbed one-third of the shells that Kyle found.  How many seashells did Leigh have?"
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "Mimi has 2 x 12 = "
+          },
+          {
+            "type": "python",
+            "text": "2*12"
+          },
+          {
+            "type": "python_output",
+            "text": "24"
+          },
+          {
+            "type": "text",
+            "text": "24 sea shells.\nKyle has 24 x 2 = "
+          },
+          {
+            "type": "python",
+            "text": "24*2"
+          },
+          {
+            "type": "python_output",
+            "text": "48"
+          },
+          {
+            "type": "text",
+            "text": "48 sea shells.\nLeigh has 48 / 3 = "
+          },
+          {
+            "type": "python",
+            "text": "48/3"
+          },
+          {
+            "type": "python_output",
+            "text": "16"
+          },
+          {
+            "type": "text",
+            "text": "16 sea shells.\n#### 16"
+          }
+        ]
+      }
+    ]
+  }
+
+  --- row 1 ---
+  python type: dict
+  keys: ['messages']
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Frankie's parents let him have many pets. He has six more snakes than he has cats. He has one less parrot than cats. Six of his pets have four legs. He has 2 dogs. How many pets does he have in total?"
+      },
+      {
+        "role": "assistant",
+        "content": [
+          {
+            "type": "text",
+            "text": "He has 6 - 2 = "
+          },
+          {
+            "type": "python",
+            "text": "6-2"
+          },
+          {
+            "type": "python_output",
+            "text": "4"
+          },
+          {
+            "type": "text",
+            "text": "4 cats.\nHe has 4 - 1 = "
+          },
+          {
+            "type": "python",
+            "text": "4-1"
+          },
+          {
+            "type": "python_output",
+            "text": "3"
+          },
+          {
+            "type": "text",
+            "text": "3 parrots.\nHe has 4 + 6 = "
+          },
+          {
+            "type": "python",
+            "text": "4+6"
+          },
+          {
+            "type": "python_output",
+            "text": "10"
+          },
+          {
+            "type": "text",
+            "text": "10 snakes.\nHe has a total of 2 + 4 + 3 + 10 = "
+          },
+          {
+            "type": "python"
+    ... [224 more chars]
+
+==============================================================================
+SmolTalk (train)
+==============================================================================
+  rows: 460,341
+  type: SmolTalk
+  public attrs/methods: ds, eval_type, evaluate, get_example, length, num_examples, start, step, stop
+
+  --- row 0 ---
+  python type: dict
+  keys: ['messages']
+  {
+    "messages": [
+      {
+        "content": "A researcher interested in examining students' study time per day collected data from a random sample of 20 students. Here are the data: \n\n3, 1, 2, 4, 5, 2, 3, 4, 2, 1, 2, 3, 4, 6, 3, 2, 2, 1, 5, 4\n\nWhat is the mean of this dataset? How would you describe or interpret the result?",
+        "role": "user"
+      },
+      {
+        "content": "To calculate the mean, we need to add up all the values and divide by the total number of observations. \n\nThe sum of the values is 3 + 1 + 2 + 4 + 5 + 2 + 3 + 4 + 2 + 1 + 2 + 3 + 4 + 6 + 3 + 2 + 2 + 1 + 5 + 4 = 59.\n\nThere are 20 observations in the dataset. The mean is calculated by dividing the sum by the number of observations: 59 / 20 = 2.95.\n\nThe mean of 2.95 hours per day indicates that, on average, students in this sample spend approximately 3 hours per day studying. This result suggests a relatively moderate amount of daily study time, with most students likely dedicating a few hours to studying each day. However, to better understand the study habits of this sample, further analysis, such as examining the distribution of study times or identifying any outliers, may be necessary.",
+        "role":
+    ... [3117 more chars]
+
+  --- row 1 ---
+  python type: dict
+  keys: ['messages']
+  {
+    "messages": [
+      {
+        "content": "You're an AI assistant for text re-writing. Rewrite the input text to make it more professional and formal while retaining its essential content.",
+        "role": "system"
+      },
+      {
+        "content": "Hey Alex,\n\nSo, I've been thinking a lot about our new project on the etymology of ancient languages, and I have a ton of ideas! I was reading this fascinating article about the Proto-Indo-European roots of some modern words, and it got me thinking about how we could really dive deep into this. Like, we could look at how certain words have evolved over time and see if there are any patterns or commonalities. \n\nI know it's a lot to take in, but I think it could be really interesting. Let me know what you think, and maybe we can set up a time to discuss it further. Oh, and don't forget about the conference next month! 😊\n\nTalk soon!\nEleanor",
+        "role": "user"
+      },
+      {
+        "content": "Dear Alex,\n\nI hope this message finds you well. I have been giving considerable thought to our upcoming project on the etymology of ancient languages and have developed several ideas that I believe could enhance our research. Recently, I came acros
+    ... [702 more chars]
+
+==============================================================================
+mixture sizes
+==============================================================================
+  Stage 1 (midtrain): MMLU 99,842 x3 + GSM8K 7,473 x4 = 329,418 rows
+  Stage 2 (sft):      SmolTalk 460,341 x1 = 460,341 rows
+  nanochat default:   789,759 rows (all three together)
+
+==============================================================================
+loss mask example (for the report)
+==============================================================================
+candidate rendering methods on the tokenizer: ['render_conversation', 'render_for_completion']
+  render_conversation(conversation, max_tokens=2048)
+  render_for_completion(conversation)
+
+  --- rendered with render_conversation() : GSM8K ---
+  total tokens: 129
+  supervised tokens (mask=1): 61  (47.3%)
+  masked tokens     (mask=0): 68  (52.7%)
+
+    idx      id  mask  token
+      0   32759     0  '<|bos|>'
+      1   32760     0  '<|user_start|>'
+      2      77     0  'M'
+      3   31288     0  'imi'
+      4    9931     0  '␣picked'
+      5     585     0  '␣up'
+      6      32     0  '␣'
+      7      50     0  '2'
+      8   14136     0  '␣dozen'
+      9   12961     0  '␣seas'
+     10   23909     0  'hells'
+     11     331     0  '␣on'
+     12     262     0  '␣the'
+     13    7205     0  '␣beach'
+     14      46     0  '.'
+     15      32     0  '␣'
+     16     780     0  '␣K'
+     17    1991     0  'yle'
+     18     976     0  '␣found'
+     19    5599     0  '␣twice'
+     20     352     0  '␣as'
+     21     776     0  '␣many'
+     22   10065     0  '␣shells'
+     23     352     0  '␣as'
+     24     405     0  '␣M'
+     25   31288     0  'imi'
+     26     288     0  '␣and'
+     27    1476     0  '␣put'
+     28     568     0  '␣them'
+     29     287     0  '␣in'
+     30     978     0  '␣his'
+     31   10592     0  '␣pocket'
+     32      46     0  '.'
+     33    2439     0  '␣Le'
+     34     383     0  'igh'
+     35    8618     0  '␣grab'
+     36    4362     0  'bed'
+     37     558     0  '␣one'
+     38   18378     0  '-third'
+     39     286     0  '␣of'
+     40     262     0  '␣the'
+     41   10065     0  '␣shells'
+     42     334     0  '␣that'
+     43     780     0  '␣K'
+     44    1991     0  'yle'
+     45     976     0  '␣found'
+     46      46     0  '.'
+     47      32     0  '␣'
+     48     871     0  '␣How'
+     49     776     0  '␣many'
+     50   12961     0  '␣seas'
+     51   23909     0  'hells'
+     52    1226     0  '␣did'
+     53    2439     0  '␣Le'
+     54     383     0  'igh'
+     55     419     0  '␣have'
+     56      63     0  '?'
+     57   32761     0  '<|user_end|>'
+     58   32762     0  '<|assistant_start|>'
+     59      77     1  'M'
+  ... [69 more tokens]
+candidate rendering methods on the tokenizer: ['render_conversation', 'render_for_completion']
+  render_conversation(conversation, max_tokens=2048)
+  render_for_completion(conversation)
+
+  --- rendered with render_conversation() : SmolTalk ---
+  total tokens: 1,037
+  supervised tokens (mask=1): 870  (83.9%)
+  masked tokens     (mask=0): 167  (16.1%)
+
+    idx      id  mask  token
+      0   32759     0  '<|bos|>'
+      1   32760     0  '<|user_start|>'
+      2      65     0  'A'
+      3    8838     0  '␣researcher'
+      4    4233     0  '␣interested'
+      5     287     0  '␣in'
+      6   11688     0  '␣examining'
+      7    1208     0  '␣students'
+      8      39     0  "'"
+      9    1194     0  '␣study'
+     10     618     0  '␣time'
+     11     581     0  '␣per'
+     12    1125     0  '␣day'
+     13    5584     0  '␣collected'
+     14    1114     0  '␣data'
+     15     423     0  '␣from'
+     16     257     0  '␣a'
+     17    4939     0  '␣random'
+     18    4243     0  '␣sample'
+     19     286     0  '␣of'
+     20      32     0  '␣'
+     21     570     0  '20'
+     22    1208     0  '␣students'
+     23      46     0  '.'
+     24    2607     0  '␣Here'
+     25     339     0  '␣are'
+     26     262     0  '␣the'
+     27    1114     0  '␣data'
+     28      58     0  ':'
+     29   10375     0  '␣\\n\\n'
+     30      51     0  '3'
+     31      44     0  ','
+     32      32     0  '␣'
+     33      49     0  '1'
+     34      44     0  ','
+     35      32     0  '␣'
+     36      50     0  '2'
+     37      44     0  ','
+     38      32     0  '␣'
+     39      52     0  '4'
+     40      44     0  ','
+     41      32     0  '␣'
+     42      53     0  '5'
+     43      44     0  ','
+     44      32     0  '␣'
+     45      50     0  '2'
+     46      44     0  ','
+     47      32     0  '␣'
+     48      51     0  '3'
+     49      44     0  ','
+     50      32     0  '␣'
+     51      52     0  '4'
+     52      44     0  ','
+     53      32     0  '␣'
+     54      50     0  '2'
+     55      44     0  ','
+     56      32     0  '␣'
+     57      49     0  '1'
+     58      44     0  ','
+     59      32     0  '␣'
+  ... [977 more tokens]
+
+==============================================================================
+mask statistics (first 200 rows of each)
+==============================================================================
+candidate rendering methods on the tokenizer: ['render_conversation', 'render_for_completion']
+  render_conversation(conversation, max_tokens=2048)
+  render_for_completion(conversation)
+  MMLU (all / auxiliary_train): over 200 rows, 400/74,549 tokens supervised (0.5%), mean length 373 tokens
+candidate rendering methods on the tokenizer: ['render_conversation', 'render_for_completion']
+  render_conversation(conversation, max_tokens=2048)
+  render_for_completion(conversation)
+  GSM8K (main / train): over 200 rows, 18,986/33,475 tokens supervised (56.7%), mean length 167 tokens
+candidate rendering methods on the tokenizer: ['render_conversation', 'render_for_completion']
+  render_conversation(conversation, max_tokens=2048)
+  render_for_completion(conversation)
+  SmolTalk (train): over 200 rows, 123,983/158,312 tokens supervised (78.3%), mean length 792 tokens

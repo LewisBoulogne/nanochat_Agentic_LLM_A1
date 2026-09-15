@@ -40,6 +40,11 @@ parser.add_argument("--device-type", type=str, default="", help="cuda|cpu|mps (e
 # Model loading
 parser.add_argument("--model-tag", type=str, default=None, help="model tag to load from")
 parser.add_argument("--model-step", type=int, default=None, help="model step to load from")
+# Training configuration
+parser.add_argument("--init-from", type=str, default="base", choices=["base", "sft"], help="checkpoint family to initialise from (base=pretrained, sft=a previous chat_sft stage)")
+parser.add_argument("--output-tag", type=str, default=None, help="checkpoint dir name to write to (default: same as --model-tag)")
+parser.add_argument("--train-tasks", type=str, default="default", choices=["default", "midtrain", "sft"], help="training mixture: default=all, midtrain=MMLU+GSM8K, sft=SmolTalk only")
+# Load optimizer
 parser.add_argument("--load-optimizer", type=int, default=1, help="warm-start optimizer from pretrained checkpoint (0=no, 1=yes)")
 # Training horizon
 parser.add_argument("--num-iterations", type=int, default=-1, help="number of optimization steps (-1 = full epoch)")
@@ -91,7 +96,8 @@ if not HAS_FA3:
     print0("WARNING: Flash Attention 3 not available, using PyTorch SDPA fallback. Training will be less efficient.")
 
 # Load the model and tokenizer
-model, tokenizer, meta = load_model("base", device, phase="train", model_tag=args.model_tag, step=args.model_step)
+# model, tokenizer, meta = load_model("base", device, phase="train", model_tag=args.model_tag, step=args.model_step)
+model, tokenizer, meta = load_model(args.init_from, device, phase="train", model_tag=args.model_tag, step=args.model_step)
 
 # Inherit training hyperparameters from pretrained checkpoint (None = inherit, explicit value = override)
 pretrain_user_config = meta.get("user_config", {})
@@ -159,13 +165,23 @@ for group in optimizer.param_groups:
     group["initial_lr"] = group["lr"]
 
 # SFT data mixture and DataLoader
-train_tasks = [
-    SmolTalk(split="train"), # 460K rows of general conversations
-    *[MMLU(subset="all", split="auxiliary_train") for _ in range(args.mmlu_epochs)], # 100K rows per epoch
-    *[GSM8K(subset="main", split="train") for _ in range(args.gsm8k_epochs)], # 8K rows per epoch
-]
+if args.train_tasks == "midtrain":
+    train_tasks = [
+        *[MMLU(subset="all", split="auxiliary_train") for _ in range(args.mmlu_epochs)],
+        *[GSM8K(subset="main", split="train") for _ in range(args.gsm8k_epochs)],
+    ]
+elif args.train_tasks == "sft":
+    train_tasks = [SmolTalk(split="train")]
+else:
+    train_tasks = [
+        SmolTalk(split="train"),
+        *[MMLU(subset="all", split="auxiliary_train") for _ in range(args.mmlu_epochs)],
+        *[GSM8K(subset="main", split="train") for _ in range(args.gsm8k_epochs)],
+    ]
 train_dataset = TaskMixture(train_tasks)
-print0(f"Training mixture: {len(train_dataset):,} rows (MMLU x{args.mmlu_epochs}, GSM8K x{args.gsm8k_epochs})")
+print0(f"Training mixture [{args.train_tasks}]: {len(train_dataset):,} rows "
+       f"(MMLU x{args.mmlu_epochs}, GSM8K x{args.gsm8k_epochs})")
+
 val_dataset = TaskMixture([
     SmolTalk(split="test"), # 24K rows in test set
     MMLU(subset="all", split="test", stop=5200), # 14K rows in test set, use only 5.2K to match the train ratios
@@ -305,6 +321,8 @@ progress = 0 # will go from 0 to 1 over the course of the epoch
 # Same shape as base_train but uses progress (0→1) instead of absolute step counts,
 # because SFT doesn't always know num_iterations in advance (dataset-driven stopping).
 def get_lr_multiplier(progress):
+    # clamp to [0, 1]
+    progress = min(progress, 1.0)
     if progress < args.warmup_ratio:
         return (progress + 1e-8) / args.warmup_ratio
     elif progress <= 1.0 - args.warmdown_ratio:
@@ -390,7 +408,7 @@ while True:
 
     # save checkpoint at the end of the run (all ranks participate so each saves its optimizer shard)
     if last_step:
-        output_dirname = args.model_tag if args.model_tag else f"d{depth}" # e.g. d12
+        output_dirname = args.output_tag or args.model_tag or f"d{depth}"
         checkpoint_dir = os.path.join(base_dir, "chatsft_checkpoints", output_dirname)
         save_checkpoint(
             checkpoint_dir,
