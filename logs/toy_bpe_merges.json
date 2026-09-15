@@ -1,0 +1,362 @@
+[
+  {
+    "rank": 0,
+    "pair": [
+      " ",
+      "t"
+    ],
+    "count": 63367,
+    "result": " t"
+  },
+  {
+    "rank": 1,
+    "pair": [
+      " ",
+      "a"
+    ],
+    "count": 53160,
+    "result": " a"
+  },
+  {
+    "rank": 2,
+    "pair": [
+      "i",
+      "n"
+    ],
+    "count": 46974,
+    "result": "in"
+  },
+  {
+    "rank": 3,
+    "pair": [
+      "h",
+      "e"
+    ],
+    "count": 44687,
+    "result": "he"
+  },
+  {
+    "rank": 4,
+    "pair": [
+      "r",
+      "e"
+    ],
+    "count": 34785,
+    "result": "re"
+  },
+  {
+    "rank": 5,
+    "pair": [
+      "o",
+      "n"
+    ],
+    "count": 30968,
+    "result": "on"
+  },
+  {
+    "rank": 6,
+    "pair": [
+      " t",
+      "he"
+    ],
+    "count": 29057,
+    "result": " the"
+  },
+  {
+    "rank": 7,
+    "pair": [
+      " ",
+      "s"
+    ],
+    "count": 28291,
+    "result": " s"
+  },
+  {
+    "rank": 8,
+    "pair": [
+      "e",
+      "r"
+    ],
+    "count": 28252,
+    "result": "er"
+  },
+  {
+    "rank": 9,
+    "pair": [
+      "a",
+      "t"
+    ],
+    "count": 26153,
+    "result": "at"
+  },
+  {
+    "rank": 10,
+    "pair": [
+      " ",
+      "c"
+    ],
+    "count": 24728,
+    "result": " c"
+  },
+  {
+    "rank": 11,
+    "pair": [
+      " ",
+      "o"
+    ],
+    "count": 24219,
+    "result": " o"
+  },
+  {
+    "rank": 12,
+    "pair": [
+      "e",
+      "s"
+    ],
+    "count": 21923,
+    "result": "es"
+  },
+  {
+    "rank": 13,
+    "pair": [
+      "e",
+      "n"
+    ],
+    "count": 21623,
+    "result": "en"
+  },
+  {
+    "rank": 14,
+    "pair": [
+      " ",
+      "w"
+    ],
+    "count": 20611,
+    "result": " w"
+  },
+  {
+    "rank": 15,
+    "pair": [
+      "i",
+      "t"
+    ],
+    "count": 19356,
+    "result": "it"
+  },
+  {
+    "rank": 16,
+    "pair": [
+      "in",
+      "g"
+    ],
+    "count": 19269,
+    "result": "ing"
+  },
+  {
+    "rank": 17,
+    "pair": [
+      "n",
+      "d"
+    ],
+    "count": 19144,
+    "result": "nd"
+  },
+  {
+    "rank": 18,
+    "pair": [
+      " ",
+      "p"
+    ],
+    "count": 18895,
+    "result": " p"
+  },
+  {
+    "rank": 19,
+    "pair": [
+      "i",
+      "s"
+    ],
+    "count": 18706,
+    "result": "is"
+  },
+  {
+    "rank": 20,
+    "pair": [
+      " ",
+      "f"
+    ],
+    "count": 18204,
+    "result": " f"
+  },
+  {
+    "rank": 21,
+    "pair": [
+      "o",
+      "r"
+    ],
+    "count": 18112,
+    "result": "or"
+  },
+  {
+    "rank": 22,
+    "pair": [
+      " ",
+      "b"
+    ],
+    "count": 18095,
+    "result": " b"
+  },
+  {
+    "rank": 23,
+    "pair": [
+      "a",
+      "l"
+    ],
+    "count": 17672,
+    "result": "al"
+  },
+  {
+    "rank": 24,
+    "pair": [
+      "o",
+      "u"
+    ],
+    "count": 17272,
+    "result": "ou"
+  },
+  {
+    "rank": 25,
+    "pair": [
+      "a",
+      "n"
+    ],
+    "count": 16688,
+    "result": "an"
+  },
+  {
+    "rank": 26,
+    "pair": [
+      " ",
+      "m"
+    ],
+    "count": 15774,
+    "result": " m"
+  },
+  {
+    "rank": 27,
+    "pair": [
+      " ",
+      "d"
+    ],
+    "count": 15173,
+    "result": " d"
+  },
+  {
+    "rank": 28,
+    "pair": [
+      " t",
+      "o"
+    ],
+    "count": 15116,
+    "result": " to"
+  },
+  {
+    "rank": 29,
+    "pair": [
+      "e",
+      "d"
+    ],
+    "count": 15077,
+    "result": "ed"
+  },
+  {
+    "rank": 30,
+    "pair": [
+      " ",
+      "in"
+    ],
+    "count": 14627,
+    "result": " in"
+  },
+  {
+    "rank": 31,
+    "pair": [
+      " o",
+      "f"
+    ],
+    "count": 14508,
+    "result": " of"
+  },
+  {
+    "rank": 32,
+    "pair": [
+      "a",
+      "r"
+    ],
+    "count": 14360,
+    "result": "ar"
+  },
+  {
+    "rank": 33,
+    "pair": [
+      " a",
+      "nd"
+    ],
+    "count": 14044,
+    "result": " and"
+  },
+  {
+    "rank": 34,
+    "pair": [
+      "i",
+      "c"
+    ],
+    "count": 13482,
+    "result": "ic"
+  },
+  {
+    "rank": 35,
+    "pair": [
+      "i",
+      "on"
+    ],
+    "count": 13133,
+    "result": "ion"
+  },
+  {
+    "rank": 36,
+    "pair": [
+      "l",
+      "e"
+    ],
+    "count": 11753,
+    "result": "le"
+  },
+  {
+    "rank": 37,
+    "pair": [
+      "r",
+      "o"
+    ],
+    "count": 11040,
+    "result": "ro"
+  },
+  {
+    "rank": 38,
+    "pair": [
+      " ",
+      "h"
+    ],
+    "count": 9830,
+    "result": " h"
+  },
+  {
+    "rank": 39,
+    "pair": [
+      " t",
+      "h"
+    ],
+    "count": 9651,
+    "result": " th"
+  }
+]

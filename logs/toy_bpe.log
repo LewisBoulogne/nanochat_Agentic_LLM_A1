@@ -1,0 +1,83 @@
+reading 3,000,000 characters from shard_00000 ...
+pre-tokenized into 582,983 chunks (40,578 distinct)
+initial alphabet: 308 distinct characters
+
+| rank | pair | count | result |
+|---|---|---|---|
+| 0 | `␣` + `t` | 63,367 | `␣t` |
+| 1 | `␣` + `a` | 53,160 | `␣a` |
+| 2 | `i` + `n` | 46,974 | `in` |
+| 3 | `h` + `e` | 44,687 | `he` |
+| 4 | `r` + `e` | 34,785 | `re` |
+| 5 | `o` + `n` | 30,968 | `on` |
+| 6 | `␣t` + `he` | 29,057 | `␣the` |
+| 7 | `␣` + `s` | 28,291 | `␣s` |
+| 8 | `e` + `r` | 28,252 | `er` |
+| 9 | `a` + `t` | 26,153 | `at` |
+| 10 | `␣` + `c` | 24,728 | `␣c` |
+| 11 | `␣` + `o` | 24,219 | `␣o` |
+| 12 | `e` + `s` | 21,923 | `es` |
+| 13 | `e` + `n` | 21,623 | `en` |
+| 14 | `␣` + `w` | 20,611 | `␣w` |
+| 15 | `i` + `t` | 19,356 | `it` |
+| 16 | `in` + `g` | 19,269 | `ing` |
+| 17 | `n` + `d` | 19,144 | `nd` |
+| 18 | `␣` + `p` | 18,895 | `␣p` |
+| 19 | `i` + `s` | 18,706 | `is` |
+| 20 | `␣` + `f` | 18,204 | `␣f` |
+| 21 | `o` + `r` | 18,112 | `or` |
+| 22 | `␣` + `b` | 18,095 | `␣b` |
+| 23 | `a` + `l` | 17,672 | `al` |
+| 24 | `o` + `u` | 17,272 | `ou` |
+| 25 | `a` + `n` | 16,688 | `an` |
+| 26 | `␣` + `m` | 15,774 | `␣m` |
+| 27 | `␣` + `d` | 15,173 | `␣d` |
+| 28 | `␣t` + `o` | 15,116 | `␣to` |
+| 29 | `e` + `d` | 15,077 | `ed` |
+| 30 | `␣` + `in` | 14,627 | `␣in` |
+| 31 | `␣o` + `f` | 14,508 | `␣of` |
+| 32 | `a` + `r` | 14,360 | `ar` |
+| 33 | `␣a` + `nd` | 14,044 | `␣and` |
+| 34 | `i` + `c` | 13,482 | `ic` |
+| 35 | `i` + `on` | 13,133 | `ion` |
+| 36 | `l` + `e` | 11,753 | `le` |
+| 37 | `r` + `o` | 11,040 | `ro` |
+| 38 | `␣` + `h` | 9,830 | `␣h` |
+| 39 | `␣t` + `h` | 9,651 | `␣th` |
+
+merges written to logs/toy_bpe_merges.json
+
+auto-selected example: '␣information' (6 merges fire)
+
+=== merge trace for '␣information' ===
+start:  ['␣', 'i', 'n', 'f', 'o', 'r', 'm', 'a', 't', 'i', 'o', 'n']
+  merge # 2: 'i' + 'n' -> 'in'
+  merge # 5: 'o' + 'n' -> 'on'
+  merge # 9: 'a' + 't' -> 'at'
+  merge #21: 'o' + 'r' -> 'or'
+  merge #30: '␣' + 'in' -> '␣in'
+  merge #35: 'i' + 'on' -> 'ion'
+final:  ['␣in', 'f', 'or', 'm', 'at', 'ion']   (6 tokens)
+
+=== tree ===
+└── '␣in'  [#30, 14,627]
+    ├── '␣'
+    └── 'in'  [#2, 46,974]
+        ├── 'i'
+        └── 'n'
+└── 'f'
+└── 'or'  [#21, 18,112]
+    ├── 'o'
+    └── 'r'
+└── 'm'
+└── 'at'  [#9, 26,153]
+    ├── 'a'
+    └── 't'
+└── 'ion'  [#35, 13,133]
+    ├── 'i'
+    └── 'on'  [#5, 30,968]
+        ├── 'o'
+        └── 'n'
+
+graphviz source written to logs/merge_tree.dot
+render with: mkdir -p figures && dot -Tpdf logs/merge_tree.dot -o figures/merge_tree.pdf

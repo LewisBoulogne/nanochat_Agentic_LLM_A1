@@ -1,0 +1,54 @@
+small vocab: 8,192   (tokenizer_v8192)
+large vocab: 32,768   (tokenizer_v32768)
+
+| Text type | chars | tokens @8k | tokens @32k | tok/char @8k | tok/char @32k | bytes/tok @32k | reduction |
+|---|---|---|---|---|---|---|---|
+| ClimbMix doc (English) | 4,000 | 1,016 | 828 | 0.2540 | 0.2070 | 4.85 | +18.5% |
+| English prose | 352 | 91 | 79 | 0.2585 | 0.2244 | 4.46 | +13.2% |
+| Dutch prose | 294 | 116 | 107 | 0.3946 | 0.3639 | 2.75 | +7.8% |
+| Python source | 486 | 199 | 166 | 0.4095 | 0.3416 | 2.93 | +16.6% |
+| Numbers / IDs | 165 | 87 | 85 | 0.5273 | 0.5152 | 1.94 | +2.3% |
+| Greek | 167 | 291 | 244 | 1.7425 | 1.4611 | 1.25 | +16.2% |
+| Japanese | 59 | 162 | 128 | 2.7458 | 2.1695 | 1.38 | +21.0% |
+| Misspelled English | 187 | 53 | 47 | 0.2834 | 0.2513 | 3.98 | +11.3% |
+| Emoji | 67 | 32 | 27 | 0.4776 | 0.4030 | 3.11 | +15.6% |
+
+
+=== token-level breakdowns (␣ = space) ===
+
+--- Numbers ---
+    text: '3.14159265 1234567 2026 42'
+    @ 8k ( 16 tokens): 3 | . | 14 | 15 | 92 | 65 | ␣ | 12 | 34 | 56 | 7 | ␣ | 20 | 26 | ␣ | 42
+    @32k ( 16 tokens): 3 | . | 14 | 15 | 92 | 65 | ␣ | 12 | 34 | 56 | 7 | ␣ | 20 | 26 | ␣ | 42
+
+--- Code indentation ---
+    text: '    if i < len(symbols) - 1:\n        new.append(a + b)'
+    @ 8k ( 26 tokens): ␣␣␣ | ␣if | ␣i | ␣< | ␣l | en | (s | ym | bol | s | ) | ␣- | ␣ | 1 | :\n | ␣␣␣␣ | ␣␣␣ | ␣new | . | app | end | ( | a | ␣+ | ␣b | )
+    @32k ( 24 tokens): ␣␣␣ | ␣if | ␣i | ␣< | ␣l | en | (s | ym | bol | s | ) | ␣- | ␣ | 1 | :\n | ␣␣␣␣␣␣␣ | ␣new | . | app | end | (a | ␣+ | ␣b | )
+
+--- Misspellings ---
+    text: 'flu seaon bythe recomended vacinated'
+    @ 8k ( 11 tokens): f | lu | ␣sea | on | ␣by | the | ␣rec | om | ended | ␣vac | inated
+    @32k ( 10 tokens): flu | ␣sea | on | ␣by | the | ␣rec | om | ended | ␣vac | inated
+
+--- Correct spellings ---
+    text: 'flu season by the recommended vaccinated'
+    @ 8k (  8 tokens): f | lu | ␣season | ␣by | ␣the | ␣recommended | ␣vacc | inated
+    @32k (  6 tokens): flu | ␣season | ␣by | ␣the | ␣recommended | ␣vaccinated
+
+--- Greek ---
+    text: 'Η Βιβλιοθήκη'
+    @ 8k ( 22 tokens): � | � | ␣� | � | � | � | � | � | � | � | � | � | � | � | � | � | � | � | � | � | � | �
+    @32k ( 19 tokens): � | � | ␣� | � | � | � | β | λ | � | � | � | � | θ | � | � | � | � | � | �
+
+--- Emoji ---
+    text: '🎉🔥📉'
+    @ 8k (  9 tokens): � | � | � | � | � | � | � | � | �
+    @32k (  9 tokens): � | � | � | � | � | � | � | � | �
+
+
+=== parameter cost of the vocabulary ===
+    depth 2 (d=128), vocab 8k: embedding 1,048,576 + lm_head 1,048,576 = 2,097,152 params
+    depth 2 (d=128), vocab 32k: embedding 4,194,304 + lm_head 4,194,304 = 8,388,608 params
+    depth 4 (d=256), vocab 8k: embedding 2,097,152 + lm_head 2,097,152 = 4,194,304 params
+    depth 4 (d=256), vocab 32k: embedding 8,388,608 + lm_head 8,388,608 = 16,777,216 params
