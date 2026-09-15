@@ -1,0 +1,101 @@
+2026-09-12 16:20:18,473 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-12 16:20:18,474 - nanochat.checkpoint_manager - [32m[1mINFO[0m - No model tag provided, guessing model tag: d4
+2026-09-12 16:20:18,474 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /local/s4597036/nanochat/base_checkpoints/d4 with step 528
+2026-09-12 16:20:18,590 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 4, 'n_head': 2, 'n_kv_head': 2, 'n_embd': 256, 'window_pattern': 'L'}
+Traceback (most recent call last):
+  File "/home/s4597036/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/runpy.py", line 196, in _run_module_as_main
+    return _run_code(code, main_globals, None,
+  File "/home/s4597036/.local/share/uv/python/cpython-3.10-linux-x86_64-gnu/lib/python3.10/runpy.py", line 86, in _run_code
+    exec(code, run_globals)
+  File "/home/s4597036/nanochat/scripts/base_eval.py", line 243, in <module>
+    main()
+  File "/home/s4597036/nanochat/scripts/base_eval.py", line 213, in main
+    bpb = evaluate_bpb(model, loader, steps, token_bytes)
+  File "/home/s4597036/nanochat/.venv/lib/python3.10/site-packages/torch/utils/_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+  File "/home/s4597036/nanochat/nanochat/loss_eval.py", line 33, in evaluate_bpb
+    loss2d = model(x, y, loss_reduction='none') # (B, T)
+  File "/home/s4597036/nanochat/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1775, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+  File "/home/s4597036/nanochat/.venv/lib/python3.10/site-packages/torch/nn/modules/module.py", line 1786, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "/home/s4597036/nanochat/nanochat/gpt.py", line 515, in forward
+    logits = softcap * torch.tanh(logits / softcap) # squash the logits
+torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 4.00 GiB. GPU 0 has a total capacity of 7.62 GiB of which 3.24 GiB is free. Including non-PyTorch memory, this process has 4.29 GiB memory in use. Of the allocated memory 4.17 GiB is allocated by PyTorch, and 8.18 MiB is reserved by PyTorch but unallocated. If reserved but unallocated memory is large try setting PYTORCH_CUDA_ALLOC_CONF=expandable_segments:True to avoid fragmentation.  See documentation for Memory Management  (https://pytorch.org/docs/stable/notes/cuda.html#environment-variables)
+Autodetected device type: cuda
+Evaluating model: base_model (step 528)
+Eval modes: bpb, core, sample
+
+================================================================================
+Model Samples
+================================================================================
+
+Conditioned samples:
+--------------------------------------------------------------------------------
+<|bos|>The capital of France is the capital of France. The capital of France is the capital of France. The
+--------------------------------------------------------------------------------
+<|bos|>The chemical symbol of gold is the name of the chemical symbol of gold. The symbol of gold is the name
+--------------------------------------------------------------------------------
+<|bos|>If yesterday was Friday, then tomorrow will be a little bit more than the last time I was in the 19th century
+--------------------------------------------------------------------------------
+<|bos|>The opposite of hot is the hot hot hot hot hot hot hot hot hot hot hot hot hot hot hot
+--------------------------------------------------------------------------------
+<|bos|>The planets of the solar system are: The planets of the solar system are: The planets of the solar system are:
+--------------------------------------------------------------------------------
+<|bos|>My favorite color is the "sweet" color. I have a color that is not a color
+--------------------------------------------------------------------------------
+<|bos|>If 5*x + 3 = 13, then x is 1 = 1, then x is 1 = 1, then
+
+Unconditioned samples:
+--------------------------------------------------------------------------------
+<|bos|>JS BTW, Adam Aitel 7807 and Adam Aitel – 4204
+Minister square field field design, crashing field field introduce particles of the C-12 in the cockpit angle, with a medium-coloured atmospheric pressure, out of a significant proportioning in the water product as it increases the atmospheric pressure of the engine manifold. In fact, there would be an abundance of heavy amounts and growing factors on the complex surface of the vehicle, which will be reached in case of ships in society or in the environment.
+Duration: 40-50 hours
+2 weeks short, a mild and 28
+--------------------------------------------------------------------------------
+<|bos|>Main navigation
+Post navigation
+Theprimary system in Kenya explains that hydrating water is well balanced, despite a set of processes which not consistently accelerate through those actions they are incorporated to water bodies. Phonics is designed for this element of terrestrial recreation plants and ideas in order to obtain a new "overwitch" of variation. In order to learn more about how hydrating water and phytoplankton growth is important, please feel free to have access to the aquarium resources provided. Water speech has a synobravive (thyronium) system which measures water quality, and to cope with extreme heat
+
+Conference is a component of
+--------------------------------------------------------------------------------
+<|bos|>Anglers yd thrublaster Free loans in 1953. Zhang That's out it's a better and cheaper loan than anyone else. But as like all bets, they say pretty much goes up it. Also King Cobpago Save than South Rona Favourn uno.
+Eunges and diabetes, on the other hand,, literally, steam out of nowhere they even bought the loan.取 intreasfittakers Around The largest rooftops in China.
+After just a few months, told Luci Keylegro that the largest Australia dealer on theaaS.
+
+I believe the uncv
+--------------------------------------------------------------------------------
+<|bos|>Robot VirtualCarpusatitor
+
+This family is a member of the Robot virtual family or Windows 12, using Minecraft, 69, email for FREE left-to a type. All I LOVE!! And there are many sculptures of all the virtual 69. Smart is a desktop PC and arch, 7000 BC. So you may find Windows which you can discovered with Roman glass? Tired up the resistance of the big 60s to B-V.
+Saturals Find a Same Strap
+
+This family shows you almost 3.6x flatlands on the top of your mouth. That's the
+--------------------------------------------------------------------------------
+<|bos|>User Review: It the Moral Landmark of the town
+Aurofit bi½ so yeah,
+I hope the Moral Landmark of the
+
+As happened from 180 BCE this year, I am convinced that this does not only keep the coast on developer Monkodes using mud,
+and on Amazon anyway except 1 km where he'd offrun the
+
+d3....
+Prally now they do bit intuitively do true narrative, so near the same nuance that we have seen about how the identical approach is, how still will someone let you know
+
+You only idiotly say that. So it affects how it
+--------------------------------------------------------------------------------
+<|bos|>Fuel Can't Make Paper Chanese
+PAINTED The Common Name of Patenton Statistics: 105%
+In 2017 post Alien Dance Corporation (3rd Grade) provided a 180-year-old family tradition for Teen Slim Nineties. Describing for Parental Work Executive Director, Lex. Speckar Mortg hunger returned items to child-friendly consumption by the association with a month ending up in the next month. Bost at 62-325-108, are most common among teen-lives and teens. They persist for up to six years, so it's an opportunity to undergo
+--------------------------------------------------------------------------------
+<|bos|>Critical Ore Treatment What Is Interior Benefits Soaked Sensory Insights
+Critical Ore Treatment What Is Interior Benefits?
+This book is intended for a broad range of articles examining the advantages and disadvantages of interior nail plate drilling research. Topics covered roughly include: hydrothermal vents that don't have moisture, humidity, and dampness. crusting making the skin dense, it does however affect your appearance and also make it look more pleasant. Exterior producting in rough bottoms can create streaks of translucent, felony texture, and facial Cluster so that your pet staring into tears and bands will make it shiny, shiny, brown, biogenic,
+--------------------------------------------------------------------------------
+<|bos|>The purpose of the study is to identify trends and the path toward growth and differentiation of fruit-bearing foods and elements of their collection and identification.
+However, tree-based studies have become a staple in their large-scale genomics studies. Of all insects and debris can be found through a checklist as follows: SWRG (DWEBES), this work is formulated on the basis of a variety of activities. It is a fully assembled group that runs here on the (average), from the old-school pool like to the old-school pool!
+Vascular Plants detect stress during a plant diet. The signs of pathogenesis appear far behind what occurs next:
+
+================================================================================
+BPB Evaluation
+================================================================================

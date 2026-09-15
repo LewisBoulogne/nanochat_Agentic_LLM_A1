@@ -1,0 +1,12 @@
+2026-09-13 15:13:04,182 - nanochat.common - [32m[1mINFO[0m - Distributed world size: 1
+2026-09-13 15:13:04,182 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Loading model from /home/s4597036/scratch/nanochat/base_checkpoints/d4-L with step 528
+2026-09-13 15:13:04,288 - nanochat.checkpoint_manager - [32m[1mINFO[0m - Building model with config: {'sequence_len': 2048, 'vocab_size': 32768, 'n_layer': 4, 'n_head': 2, 'n_kv_head': 2, 'n_embd': 256, 'window_pattern': 'L'}
+Autodetected device type: cuda
+Evaluating model: base_model (step 528)
+Eval modes: bpb
+
+================================================================================
+BPB Evaluation
+================================================================================
+train bpb: 1.121940
+val bpb: 1.132214

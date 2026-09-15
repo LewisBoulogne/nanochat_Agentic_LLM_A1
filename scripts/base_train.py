@@ -99,6 +99,24 @@ print0(f"COMPUTE_DTYPE: {COMPUTE_DTYPE} ({COMPUTE_DTYPE_REASON})")
 use_dummy_wandb = args.run == "dummy" or not master_process
 wandb_run = DummyWandb() if use_dummy_wandb else wandb.init(project="nanochat", name=args.run, config=user_config)
 
+# jsonl logging
+_repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+jsonl_path = None
+if master_process:
+    os.makedirs(os.path.join(_repo_root, "logs"), exist_ok=True)
+    jsonl_path = os.path.join(_repo_root, "logs",
+        f"base_train_{args.run}_{time.strftime('%Y%m%d_%H%M%S')}.jsonl")
+
+def jlog(**kw):
+    if jsonl_path is None:
+        return
+    kw.setdefault("wall_time", time.time())
+    with open(jsonl_path, "a") as f:
+        f.write(json.dumps(kw, default=str) + "\n")
+
+jlog(event="config", user_config=user_config)
+print0(f"jsonl log: {jsonl_path}")
+
 # Flash Attention status
 from nanochat.flash_attention import USE_FA3
 using_fa3 = USE_FA3
@@ -356,6 +374,13 @@ print0(f"Total number of training tokens: {total_tokens:,}")
 print0(f"Tokens : Scaling params ratio: {total_batch_size * num_iterations / num_scaling_params:.2f}") # e.g. Chinchilla was ~20
 print0(f"Total training FLOPs estimate: {num_flops_per_token * total_tokens:e}")
 
+jlog(event="run_meta",
+     model_config=model_config_kwargs, param_counts=param_counts,
+     num_scaling_params=num_scaling_params, flops_per_token=num_flops_per_token,
+     total_batch_size=total_batch_size, num_iterations=num_iterations,
+     total_tokens=total_tokens, batch_lr_scale=batch_lr_scale,
+     weight_decay_scaled=weight_decay_scaled, vocab_size=vocab_size)
+
 # Learning rate schedule (linear warmup, constant, linear warmdown)
 def get_lr_multiplier(it):
     warmup_iters = args.warmup_steps
@@ -425,6 +450,7 @@ while True:
         with disable_fp8(model):
             val_bpb = evaluate_bpb(model, val_loader, eval_steps, token_bytes)
         print0(f"Step {step:05d} | Validation bpb: {val_bpb:.6f}")
+        jlog(event="val", step=step, val_bpb=val_bpb, flops=flops_so_far, total_training_time=total_training_time)
         if val_bpb < min_val_bpb:
             min_val_bpb = val_bpb
         wandb_run.log({
@@ -444,6 +470,7 @@ while True:
         with disable_fp8(orig_model):
             results = evaluate_core(orig_model, tokenizer, device, max_per_task=args.core_metric_max_per_task)
         print0(f"Step {step:05d} | CORE metric: {results['core_metric']:.4f}")
+        jlog(event="core", step=step, core_metric=results["core_metric"], centered_results=results["centered_results"])
         wandb_run.log({
             "step": step,
             "total_training_flops": flops_so_far,
@@ -565,6 +592,7 @@ while True:
         eta_str = ""
     epoch = f"{dataloader_state_dict['epoch']} pq: {dataloader_state_dict['pq_idx']} rg: {dataloader_state_dict['rg_idx']}"
     print0(f"step {step:05d}/{num_iterations:05d} ({pct_done:.2f}%) | loss: {debiased_smooth_loss:.6f} | lrm: {lrm:.2f} | dt: {dt * 1000:.2f}ms | tok/sec: {tok_per_sec:,} | bf16_mfu: {mfu:.2f} | epoch: {epoch} | total time: {total_training_time/60:.2f}m{eta_str}")
+    jlog(event="train", step=step, train_loss=debiased_smooth_loss, raw_loss=train_loss_f, lrm=lrm, dt=dt, tok_per_sec=tok_per_sec, mfu=mfu, muon_momentum=muon_momentum, muon_weight_decay=muon_weight_decay, total_training_time=total_training_time)
     if step % 100 == 0:
         log_data = {
             "step": step,
