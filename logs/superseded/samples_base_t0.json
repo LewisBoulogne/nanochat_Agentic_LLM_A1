@@ -1,0 +1,62 @@
+[
+  {
+    "prompt": "The capital of France is",
+    "temperature": 0.0,
+    "seed": 1337,
+    "max_tokens": 48,
+    "top_k": null,
+    "source": "base",
+    "model_tag": "d4",
+    "step": 528,
+    "full_text": "The capital of France is the capital of France. The capital of France is the capital of France. The capital of France is the capital of France. The capital of France is the capital of France. The capital of France is the capital of France. The capital of",
+    "completion": "the capital of France. The capital of France is the capital of France. The capital of France is the capital of France. The capital of France is the capital of France. The capital of France is the capital of France. The capital of"
+  },
+  {
+    "prompt": "Water boils at a temperature of",
+    "temperature": 0.0,
+    "seed": 1338,
+    "max_tokens": 48,
+    "top_k": null,
+    "source": "base",
+    "model_tag": "d4",
+    "step": 528,
+    "full_text": "Water boils at a temperature of 100 degrees Fahrenheit (100 degrees Celsius) and a temperature of 100 degrees Fahrenheit (100 degrees Celsius) is the temperature of the water. The temperature of the water is 100 degrees Celsius (100 degrees",
+    "completion": "100 degrees Fahrenheit (100 degrees Celsius) and a temperature of 100 degrees Fahrenheit (100 degrees Celsius) is the temperature of the water. The temperature of the water is 100 degrees Celsius (100 degrees"
+  },
+  {
+    "prompt": "The first person to walk on the moon was",
+    "temperature": 0.0,
+    "seed": 1339,
+    "max_tokens": 48,
+    "top_k": null,
+    "source": "base",
+    "model_tag": "d4",
+    "step": 528,
+    "full_text": "The first person to walk on the moon was a 3.5-year-old woman who was 3.5-year-old. She was 3.5-year-old. She was 3.5-year-old. She was 3.5-year-old. She was 3",
+    "completion": "a 3.5-year-old woman who was 3.5-year-old. She was 3.5-year-old. She was 3.5-year-old. She was 3.5-year-old. She was 3"
+  },
+  {
+    "prompt": "In 1969, scientists discovered that",
+    "temperature": 0.0,
+    "seed": 1340,
+    "max_tokens": 48,
+    "top_k": null,
+    "source": "base",
+    "model_tag": "d4",
+    "step": 528,
+    "full_text": "In 1969, scientists discovered that the first two-dimensional model of the 1970s was a 1970s model of the 1970s model of the 1970s. The model of the 1970s model was a 1970s model",
+    "completion": "the first two-dimensional model of the 1970s was a 1970s model of the 1970s model of the 1970s. The model of the 1970s model was a 1970s model"
+  },
+  {
+    "prompt": "The main difference between a virus and a bacterium is",
+    "temperature": 0.0,
+    "seed": 1341,
+    "max_tokens": 48,
+    "top_k": null,
+    "source": "base",
+    "model_tag": "d4",
+    "step": 528,
+    "full_text": "The main difference between a virus and a bacterium is that the virus is not a virus. The virus is not a virus, but it is not a virus. The virus is not a virus, but it is not a virus. The virus is not a virus, but it is not a",
+    "completion": "that the virus is not a virus. The virus is not a virus, but it is not a virus. The virus is not a virus, but it is not a virus. The virus is not a virus, but it is not a"
+  }
+]

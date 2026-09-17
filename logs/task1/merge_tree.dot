@@ -1,0 +1,35 @@
+digraph merges {
+  node [shape=box, fontname="monospace"];
+  rankdir=BT;
+  ordering=out;
+  n2507 [label="␣in\nmerge #30, count 14,627"];
+  n2491 [label="␣"];
+  n2491 -> n2507;
+  n2503 [label="in\nmerge #2, count 46,974"];
+  n2492 [label="i"];
+  n2492 -> n2503;
+  n2493 [label="n"];
+  n2493 -> n2503;
+  n2503 -> n2507;
+  n2494 [label="f"];
+  n2506 [label="or\nmerge #21, count 18,112"];
+  n2495 [label="o"];
+  n2495 -> n2506;
+  n2496 [label="r"];
+  n2496 -> n2506;
+  n2497 [label="m"];
+  n2505 [label="at\nmerge #9, count 26,153"];
+  n2498 [label="a"];
+  n2498 -> n2505;
+  n2499 [label="t"];
+  n2499 -> n2505;
+  n2508 [label="ion\nmerge #35, count 13,133"];
+  n2500 [label="i"];
+  n2500 -> n2508;
+  n2504 [label="on\nmerge #5, count 30,968"];
+  n2501 [label="o"];
+  n2501 -> n2504;
+  n2502 [label="n"];
+  n2502 -> n2504;
+  n2504 -> n2508;
+}
