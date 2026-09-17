@@ -12,7 +12,7 @@ for TAG in d4L-midtrain d4L-sft; do
   echo "################ $TAG ################"
   for P in "${PROMPTS[@]}"; do
     echo "---- PROMPT: $P"
-    python -m scripts.chat_cli -i sft -g "$TAG" -t 0.0 -p "$P" 2>/dev/null
+    python -m scripts.chat_cli -i sft -g "$TAG" -t 0.0 -k 1 -p "$P" 2>/dev/null
     echo
   done
 done
