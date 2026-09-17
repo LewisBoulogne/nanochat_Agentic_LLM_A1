@@ -1,0 +1,152 @@
+################ d4L-midtrain ################
+---- PROMPT: What is the capital of France?
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: The capital of products is $<|python_start|>$<|python_start|>$<|python_start|>$<|python_start|>1<|python_end|><|output_start|>1<|output_end|>1
+The capital of products is $<|python_start|>$1<|python_end|>$1
+The capital of products is $<|python_start|>$1<|python_end|>$1
+The capital of products is $<|python_start|>$1<|python_end|>$1
+The capital of products is $<|python_start|>$1<|python_end|>$1
+The capital of products is $<|python_start|>$1<|python_end|>$1
+The capital of products is $<|python_start|>$1<|python_end|>$1
+The capital of products is $<|python_start|>$1<|python_end|>$1
+The capital of products is $<|python_start|>$1<|python_end|>$1
+The capital of products is $<|python_start|>$1<|python_end|>$1
+The capital of products is $<|python_start|>$1<|python_end|>$1
+The capital of products is $<|python_start|>$1<|python_end|>$1
+The capital of products is $<|python_start|>$1<|python_end|>$1
+The capital of products is $<|python_start|>$1<|python_end|>$1
+The capital of products is $<|python_start|>$1<|python_end|>$1
+The capital of products is $<|python_start|>$1<|python_end|>$1
+The capital of products is $$1-$1-$1-$1-$1-$1-$1-$1-$1-$1-$1-$1-$1-
+
+---- PROMPT: Which of the following is a mammal? A) Shark B) Dolphin C) Trout D) Octopus
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: If the next is the same amount of the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (1/2) the previous (
+
+---- PROMPT: Natalia sold clips to 48 friends in April, and half as many in May. How many clips did she sell altogether?
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: Natalia sold 48/2 = <|python_start|>48/2<|python_end|><|output_start|>24.0<|output_end|>24.0 May.
+Natalia sold 48/2 = <|python_start|>48/2<|python_end|><|output_start|>24.0<|output_end|>24.0 May.
+#### 24<|assistant_end|>
+
+---- PROMPT: Hello! Can you tell me a bit about yourself?
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: There are 2, 0,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,000,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,0,,
+
+---- PROMPT: Explain why the sky is blue.
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: The sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue, so the sky is blue
+
+################ d4L-sft ################
+---- PROMPT: What is the capital of France?
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: The capital of France is Paris, a city known for its rich history, culture, and cultural significance. It is a city that has been known for its rich history, culture, and cultural significance. Paris is a city that has been known for its rich history, culture, and cultural significance, and it has been a staple in many modern cities.
+
+The capital of France is Paris, a city renowned for its rich history, culture, and cultural significance. It is a city that has been known for its rich history, culture, and cultural significance, and it has been a staple in many modern cities. Paris is a city that has been known for its rich history, culture, and cultural significance, and it has been a staple in many modern cities.
+
+The capital of France is Paris, a city renowned for its rich history, culture, and cultural significance. It is a city that has been known for its rich history, culture, and cultural significance, and it has been a staple in many modern cities. Paris is a city that has been known for its rich history, culture, and cultural significance, and it has been a staple in many modern cities.<|assistant_end|>
+
+---- PROMPT: Which of the following is a mammal? A) Shark B) Dolphin C) Trout D) Octopus
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: The question of whether a shark is a shark or a shark is a classic example of a shark's behavior. The key to this problem is that shark B is a shark, as it is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark that is a shark
+
+---- PROMPT: Natalia sold clips to 48 friends in April, and half as many in May. How many clips did she sell altogether?
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: To find the number of clips she sold, we need to calculate the total number of clips she sold and then divide it by the total number of clips she sold.
+
+Natalia sold clips are sold in April, and half of the total clips she sold is 48 friends. So, the total number of clips she sold is 48 friends / 48 friends = 0.5 or 5.5 clips.
+
+Now, we can calculate the number of clips she sold by dividing the total number of clips she sold by the total number of clips she sold. This gives us 48 friends / 48 friends = 0.5 or 5.5 clips.
+
+To find the number of clips she sold by the total number of clips she sold, we divide the total number of clips she sold by the total number of clips she sold. This gives us 48 friends / 48 friends = 0.5 or 5.5 clips.
+
+So, she sold 0.5 or 5.5 clips.<|assistant_end|>
+
+---- PROMPT: Hello! Can you tell me a bit about yourself?
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: I'm so glad you're interested in learning more about yourself. My name is Emily, and I'm a bit of a mentor for me. I've been fortunate enough to have had a great relationship with my friends and family, and I've had the privilege of working with some of the most talented individuals in the world.
+
+I've had the privilege of working with some of the most talented individuals in the world, and I've had the privilege of working with some of the most talented individuals in the world. I've also had the privilege of working with some of the most talented individuals in the world, and I've had the privilege of working with some of the most talented individuals in the world.
+
+What's on your mind? Are you looking for a specific challenge or a particular challenge you're facing, or perhaps a particular challenge you're facing in your own right?<|assistant_end|>
+
+---- PROMPT: Explain why the sky is blue.
+Autodetected device type: cuda
+
+NanoChat Interactive Mode
+--------------------------------------------------
+Type 'quit' or 'exit' to end the conversation
+Type 'clear' to start a new conversation
+--------------------------------------------------
+
+Assistant: The sky is blue, and the sky is blue. It is a blue, but it is not blue. The sky is blue, and the sky is blue. The sky is blue, and the sky is blue.
+
+The sky is blue, and the sky is blue. The sky is blue, and the sky is blue. The sky is blue, and the sky is blue. The sky is blue, and the sky is blue. The sky is blue, and the sky is blue.
+
+The sky is blue, and the sky is blue. The sky is blue, and the sky is blue. The sky is blue, and the sky is blue. The sky is blue, and the sky is blue. The sky is blue, and the sky is blue.
+
+The sky is blue, and the sky is blue. The sky is blue, and the sky is blue. The sky is blue, and the sky is blue. The sky is blue, and the sky is blue. The sky is blue, and the sky is blue. The sky is blue, and the sky is blue. The sky is blue, and the sky is blue. The sky is blue, and the sky is blue. The sky is blue, and the sky is blue. The sky is
+
