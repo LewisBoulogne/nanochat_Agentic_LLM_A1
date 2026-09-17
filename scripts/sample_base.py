@@ -47,11 +47,9 @@ def load(source, model_tag, step, device, phase="eval"):
 
 
 def generate(engine, tokenizer, prompt, temperature, max_tokens, seed, top_k=None):
-    torch.manual_seed(seed)
     tokens = tokenizer(prompt, prepend="<|bos|>")
-    kwargs = dict(num_samples=1, max_tokens=max_tokens, temperature=temperature)
-    sig = inspect.signature(engine.generate_batch)
-    if top_k is not None and "top_k" in sig.parameters:
+    kwargs = dict(num_samples=1, max_tokens=max_tokens, temperature=temperature, seed=seed)
+    if top_k is not None:
         kwargs["top_k"] = top_k
     out = engine.generate_batch(tokens, **kwargs)
     sample = out[0] if isinstance(out, tuple) else out
